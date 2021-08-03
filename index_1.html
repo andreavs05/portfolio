@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link href="./index_1.css" rel="stylesheet">
+    <script>
+        window.addEventListener('load',function(){
+
+            var imagenes = ['./herramientas/gitHub.jpg','./herramientas/IntelliJ.png','./herramientas/netbeans.jpg','./herramientas/SQLServer.jpg','./herramientas/visualStudio.png'];
+
+            var indiceImagenes = 0;
+            var tiempo = 1000;
+            function cambiarImagenes(){
+                document.slider.src = imagenes[indiceImagenes];
+                if (indiceImagenes < 4) {
+                    indiceImagenes++;
+                } else {
+                    indiceImagenes = 0;
+                }
+            }
+
+            setInterval(cambiarImagenes, tiempo);
+        });
+
+        function toggleHidden(selector) {
+        element = document.querySelector(selector);
+        element.hidden = element.hidden ? false : true;
+        }
+    </script>
+</head>
+<body>
+    <header >
+            <nav class="hdr ">
+                <li class="flotar_izq"><img src="./img/Inicio.png"> <a href="./index_1.html"><b>Inicio</b></a></li>
+                <li class="flotar_der"><a href="https://www.facebook.com/"> <img src="./img/facebook.png"> </a></li>
+                <li class="flotar_der"><a href="https://github.com/andreavs05/andreavs05"> <img src="./img/gitHub.jpg"> </a></li>
+                <li class="flotar_der"><a href="https://outlook.live.com/mail/0/inbox"> <img src="./img/email.jpg"> </a></li>
+            </nav>
+    </header>
+
+    <div class="biografia flotar_izq tema">
+
+        <h2>Informaciòn Personal</h2>
+
+        <div>
+            <h3 class="items" onClick="toggleHidden('#info')">Bibiografìa</h3>
+
+            <div>
+                <p id="info" hidden>
+                    Mi nombre es Andrea Ibeth Cachipuendo Catucuamba,
+                    naci 5 de Mayo de 1998 en la cuidad de Quito y tengo 23 años.
+                    Termine mis estudios primarios en la Escuela Juan Borja con honores,
+                    obtuve mi tìtulo de Bachiller en Ciencias en el Colegio "24 de Mayo" por el año de 2017
+                    y actualmente me encuentro cursando mis estudios en la Facultad de Ingenierìa en Sistemas y Computaciòn
+                    en la Carrera de Software en la Escuela Politècnica Nacional.
+                </p>
+            </div>
+
+            <h3 class="items" onClick="toggleHidden('#lenguajes')">Conocimientos de programaciòn</h3>
+            <nav id="lenguajes">
+                <li>Java</li>
+                <li>Html</li>
+            </nav>
+            <h3 class="items">Herramientas utilizadas</h3>
+            <img  id="sliderPass" name="slider">
+
+            <h3 class="items" onClick="toggleHidden('#idiomas')">Idioma</h3>
+            <div id="idiomas">
+                <p>Español <i>Idioma Nativo</i></p>
+                <p>Inglès <i>Nivel Acadèmico 1</i></p>
+            </div>
+
+            <h3 class="items" onClick="toggleHidden('#intereses')">Intereses</h3>
+            <div id="intereses">
+                <p>Aprendizaje de nuevos idiomas como: Francès, Aleman</p>
+                <p>Aprendizaje de nuevos lenguajes de programaciòn o frameworks como: JScript, Phyton, C#, Ruby, Angular, etc.</p>
+            </div>
+
+        </div>
+    </div>
+    <div class="perfil flotar_der">
+
+        <img src="./img/perfilFoto.jpeg">
+        <h2 class="tema"><b>"El carácter es la fuerza sorda y constante de la voluntad."</b><br>
+            <p class="flotar_der">Henri Dominique Lacordaire (1802-1861)</p>
+        </h2>
+
+        <div class="other">
+            <h4>Informaciòn Adicional</h4>
+            <p>
+                <b> Direcciòn: </b> Barrio Puertas del Sol
+                <br><b>Telèfono: </b> (02)5007787 - 0990853308
+                <br><b> Email: </b>andrea.cachipuendo@epn.edu.ec
+            </p>
+        </div>
+    </div>
+
+
+</body>
+<footer id="footer" class="colorweb">
+    <h3>Tèrminos y Condiciones</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, voluptas provident!
+        Corrupti mollitia veritatis, pariatur eligendi autem rerum ipsum facere temporibus adipisci aut maxime
+        necessitatibus officiis alias vel tenetur odio?</p>
+    <p>Andrea Cachipuendo | Club de Software EPN | <a href="https://www.epn.edu.ec">Escuela Politécnica Nacional</a></p>
+</footer>
+</html>
